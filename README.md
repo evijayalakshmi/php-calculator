@@ -29,3 +29,19 @@ Go to your main directory where the Apache installed
 In my case, the path is
 
     C:\Bitnami\wampstack-7.4.7-0\apache2\htdocs
+
+# Application
+
+Created a new file calculator.php
+
+1. Added HTML Content with PHP.
+2. Utilized Bootstrap 4.5 [dependencies](https://getbootstrap.com/docs/4.5/getting-started/introduction/#quick-start)
+3. Tested if bootstrap works, with sample div tag.
+4. UI modifications - Utilized bootstrap for UI.
+5. Learnt creating classes and function in PHP, POST request for calculator operations.
+
+# Testing
+
+using Robot Framework Testing,
+
+- Done with initial test case by POM.
