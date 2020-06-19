@@ -64,7 +64,7 @@ Note: The tests can be normally run in CMD prompt, is VS Code is not available.
     robot php_calculator.robot
 ```
 
-2. This command runs test cases by specified tag, where tag relates to one of the following: **add, sub, mul, div, divbyzero**
+2. This command runs set of test cases defined by tag, where tag relates to one of the following: **add, sub, mul, div, divbyzero**
 
 ```
     robot --inculde=<tag> php_calculator.robot
