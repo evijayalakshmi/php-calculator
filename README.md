@@ -42,6 +42,32 @@ Created a new file calculator.php
 
 # Testing
 
-using Robot Framework Testing,
+## Using Robot Framework
 
-- Done with initial test case by POM.
+### Requirements
+
+Install the following tools:
+
+    1. Python3 (this installs pip)
+    2. pip install robotframework
+    3. pip install robotframework-selenium2library
+
+### The tests can be run in two ways:
+
+Open the files in VS Code and open terminal, to run below commands:
+
+Note: The tests can be normally run in CMD prompt, is VS Code is not available.
+
+1. This runs all test cases
+
+```
+    robot php_calculator.robot
+```
+
+2. This command runs test cases by specified tag, where tag relates to one of the following: **add, sub, mul, div, divbyzero**
+
+```
+    robot --inculde=<tag> php_calculator.robot
+
+    for e.g., robot --include=add php_calculator.robot
+```

@@ -14,6 +14,7 @@
         <?php
             $result='';
             class Calculator
+            
             {
                var $num1;
                var $num2;
@@ -32,6 +33,12 @@
                         return $this->num1 * $this->num2;
                         break;
 
+                        case '/':
+                        if ($this->num2 == 0)
+                            return "Cannot divide by zero";
+                        return $this->num1 / $this->num2;
+                        break;
+
                    }
                }
 
@@ -44,9 +51,7 @@
 
             $cal = new Calculator;
             if(isset($_POST['submit'])){
-                console.log("working");
                 $result = $cal->getResult($_POST['num1'],$_POST['num2'],$_POST['operator']);
-                // echo "result: <input type='text' value='$result'/>";
             }
         ?>
 
@@ -56,22 +61,23 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text">Result</span>
                 </div>
-                <textarea class="form-control" aria-label="With textarea" readonly><?php echo $result; ?> </textarea>
+                <textarea class="form-control" aria-label="With textarea" readonly id="result"><?php echo $result;?></textarea>
             </div>
             <hr/>
             <form method="post" id="registrationForm">
                 <div class="form-group">
                     <label for="inputNumber1">Enter first number</label>
-                    <input type="number" class="form-control" id="inputNumber1" name="num1">
+                    <input type="number" step="any" class="form-control" id="inputNumber1" name="num1">
                 </div>
                 <div class="form-group">
                     <label for="inputNumber2">Enter second number</label>
-                    <input type="number" class="form-control" id="inputNumber2" name="num2">
+                    <input type="number" step="any" class="form-control" id="inputNumber2" name="num2">
                 </div>
                 <select class="form-control form-control-lg" name="operator">
                     <option>+</option>
                     <option>-</option>
                     <option>*</option>
+                    <option>/</option>
                 </select>
                 <button type="submit" name="submit" class="btn btn-primary mt-2 w-50"> = </button>
             </form>
